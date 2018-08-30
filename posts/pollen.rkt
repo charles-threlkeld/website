@@ -1,8 +1,6 @@
 #lang racket
 
-(require "play.rkt"
-         pollen/decode
-         pollen/misc/tutorial
+(require pollen/decode
          racket/date
          txexpr)
 
@@ -14,7 +12,14 @@
                            #:txexpr-elements-proc decode-paragraphs
                            #:string-proc (compose1 smart-quotes smart-dashes))))
 
-(define toc table-of-contents)
+(define (em . elements)
+  (txexpr 'em empty elements))
 
 (define date
   (date->string (current-date)))
+
+(define (title . elements)
+  (txexpr 'em empty elements))
+
+(define (author . elements)
+  (txexpr 'strong empty elements))

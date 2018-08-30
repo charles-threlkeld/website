@@ -30,3 +30,7 @@ h1 {
 #next {
     right: ◊|edge|em;
 }
+
+#modified {
+    font-size: ◊(/ multiplier 2)em;
+}
