@@ -14,7 +14,16 @@
                            #:txexpr-elements-proc decode-paragraphs
                            #:string-proc (compose1 smart-quotes smart-dashes))))
 
-(define toc table-of-contents)
-
 (define date
   (date->string (current-date)))
+
+(define (em . elements)
+  (txexpr 'em empty elements))
+
+(define (title . elements)
+  (txexpr 'em empty elements))
+
+(define (author . elements)
+  (txexpr 'strong empty elements))
+          
+(define toc table-of-contents)
