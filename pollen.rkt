@@ -14,6 +14,12 @@
                            #:txexpr-elements-proc decode-paragraphs
                            #:string-proc (compose1 smart-quotes smart-dashes))))
 
+(define current-second
+  (number->string (date->seconds (current-date))))
+
+(define created
+  current-second)
+
 (define date
   (date->string (current-date)))
 

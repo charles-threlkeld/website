@@ -4,6 +4,7 @@
 ◊(define edge (* inner 2))
 ◊(define color "gray")
 ◊(define multiplier 1.3)
+◊(define tiny 0.1)
 
 body {
     margin: ◊|edge|em;
@@ -17,6 +18,10 @@ h1 {
     font-size: ◊|multiplier|em;
 }
 
+#creation {
+    font-size: ◊|tiny|em;
+    visibility: collapse;
+}
 
 #prev, #next {
     position: fixed;
